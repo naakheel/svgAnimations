@@ -2,9 +2,9 @@
   <defs></defs>
   <g>
     <circle id="check-circle" stroke-width="2" fill="#24A205" stroke="#24A205"
-             r="10" transform="translate(16 16)">
-      <animateTransform attributeName="transform" type="scale" additive="sum"
-          begin="0s" dur="0.5s" values="1 ; 1.5 ; 1"/>
+             cx="16" cy="16" r="10">
+      <animate attributeName="r" values="10 ; 15 ; 10"
+          begin="0s" dur="0.5s"/>
       <animate attributeName="fill" values="#24A205; #245205; #24A205"
           begin="0s" dur="0.5s"/>
     </circle>
