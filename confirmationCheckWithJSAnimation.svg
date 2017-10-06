@@ -1,7 +1,7 @@
 <svg id="check" width="100px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" onload="growCircle()">
     <g>
         <circle id="complete-circle" stroke-width="2" fill="#24A205" stroke="#24A205"
-            cx="16" cy="16" r="10">
+            cx="16" cy="16" r="12">
         </circle>
         <path id="complete-check" stroke="#fff" stroke-width="3" stroke-linecap="round"
             stroke-linejoin="round" stroke-dasharray="100" stroke-dashoffset="110"
@@ -12,12 +12,12 @@
         <![CDATA[
             var check = document.querySelector('#complete-check'),
                 circle = document.querySelector('#complete-circle'),
-                radius = 10;
+                radius = 12;
                 lightness = 33;
                 maxRadiusReached = false;
                 dashOffset = 110;
             var growCircle = function() {
-                if (radius < 10) {
+                if (radius < 12) {
                     circle.style.fill = "hsl(108,94%,33%)";
                     completeCheck();
                     return;
@@ -27,7 +27,7 @@
                     radius = radius - 0.25;
                     lightness++;
                 } else {
-                    if (radius > 14) {
+                    if (radius > 15) {
                         maxRadiusReached = true;
                     }
                     radius = radius + 0.25;
@@ -43,5 +43,6 @@
                 dashOffset--;
                 requestAnimationFrame(completeCheck);
             }
-        ]]></script>
-    </svg>
+        ]]>
+    </script>
+</svg>
