@@ -1,18 +1,18 @@
-<svg id="check" width="200px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg id="check" width="100px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs></defs>
   <g>
     <circle id="check-circle" stroke-width="2" fill="#24A205" stroke="#24A205"
              cx="16" cy="16" r="10">
       <animate attributeName="r" values="10 ; 15 ; 10"
-          begin="0s" dur="0.5s"/>
+          begin="0.5s" dur="0.5s"/>
       <animate attributeName="fill" values="#24A205; #245205; #24A205"
-          begin="0s" dur="0.5s"/>
+          begin="0.5s" dur="0.5s"/>
     </circle>
     <path id="check-check" stroke="#fff" stroke-width="3" stroke-linecap="round"
           stroke-linejoin="round" stroke-dasharray="50" stroke-dashoffset="50"
           fill="none" d="M11,17 15,20 21,12">
       <animate attributeName="stroke-dashoffset" from="50" to="0"
-          begin="0.7s" dur="1s" fill="freeze"/>
+          begin="1.2s" dur="1s" fill="freeze"/>
     </path>
   </g>
 </svg>
