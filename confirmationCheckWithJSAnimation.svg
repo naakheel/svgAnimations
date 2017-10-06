@@ -1,0 +1,47 @@
+<svg id="check" width="200px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" onload="growCircle()">
+    <g>
+        <circle id="complete-circle" stroke-width="2" fill="#24A205" stroke="#24A205"
+            cx="16" cy="16" r="10">
+        </circle>
+        <path id="complete-check" stroke="#fff" stroke-width="3" stroke-linecap="round"
+            stroke-linejoin="round" stroke-dasharray="100" stroke-dashoffset="110"
+            fill="none" d="M11,17 15,20 21,12">
+        </path>
+    </g>
+    <script>
+        <![CDATA[
+            var check = document.querySelector('#complete-check'),
+                circle = document.querySelector('#complete-circle'),
+                radius = 10;
+                lightness = 33;
+                maxRadiusReached = false;
+                dashOffset = 110;
+            var growCircle = function() {
+                if (radius < 10) {
+                    circle.style.fill = "hsl(108,94%,33%)";
+                    completeCheck();
+                    return;
+                }
+                circle.setAttribute("r", radius);
+                if (maxRadiusReached) {
+                    radius = radius - 0.25;
+                    lightness++;
+                } else {
+                    if (radius > 14) {
+                        maxRadiusReached = true;
+                    }
+                    radius = radius + 0.25;
+                    lightness--;
+                }
+                circle.style.fill = "hsl(108,94%,"+lightness+"%)";
+                requestAnimationFrame(growCircle);
+            }
+            var completeCheck = function() {
+                if (dashOffset < 0)
+                    return;
+                check.style.strokeDashoffset = dashOffset;
+                dashOffset--;
+                requestAnimationFrame(completeCheck);
+            }
+        ]]></script>
+    </svg>
